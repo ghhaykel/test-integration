@@ -1,0 +1,34 @@
+.navbar {
+  background-color: var(--primary-30) !important;
+  height: var(--header-height); 
+}
+.box-select-nav{
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 0 2px;
+  transition: all 0.3s ease-in-out;
+  &:hover{
+    background-color: var(--white);
+    transition: all 0.3s ease-in-out;
+  }
+}
+.profile-btn {
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.profile-image {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.select-context {
+  background-color: transparent;
+  border: none;
+  &:focus {
+    box-shadow: none;
+  }
+}

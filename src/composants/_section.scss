@@ -1,0 +1,24 @@
+section {
+	margin: 0 0 $s-4;
+	padding: $s-3 ;
+	@extend %radius;
+	border:0;
+	background: var(--white);
+	clear: both; 
+	width: 100%;
+	box-shadow: 0 0 4px rgba(#000000, .12);
+	position: relative;
+	> h2 {
+		margin-top: 0;
+	}
+	> .card {
+		padding: 0 !important;
+		margin: 0 !important;
+		box-shadow: none;
+		
+		> h2, h3 {
+			margin-top: 0;
+		}
+	}
+}
+

@@ -1,0 +1,9 @@
+<div class="avatar-group">
+    <ng-container *ngFor="let avatar of visibleAvatars; let i = index">
+      <img [src]="avatar" class="avatar" [style.zIndex]="1 + i" />
+    </ng-container>
+  
+    <div class="avatar more" *ngIf="extraCount > 0">
+      {{ extraCount }}
+    </div>
+  </div>

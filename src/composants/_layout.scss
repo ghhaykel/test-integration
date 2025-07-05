@@ -1,0 +1,28 @@
+main {
+    margin: 0 0 $s-5 0;
+    padding:0 $s-5 $s-4;
+	@extend %anim;
+	&.main-sidebar {
+		margin-left:320px;
+		@extend %anim;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	main.main-sidebar {
+		margin: 0 0 0 240px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	main {
+		padding: $s-7 0 0;
+		&.main-sidebar {
+			margin:0 $s-3 !important;
+		}
+	}
+}
+
+.content  {
+	min-height: 100vh;
+}

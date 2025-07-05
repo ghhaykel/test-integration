@@ -1,0 +1,41 @@
+.card {
+	margin: 0 0 $s-3;
+	padding: 0;
+	@extend %radius;
+	border:0;
+	background: var(--white);
+	clear: both; 
+	width: 100%;
+	box-shadow: 2px 4px 20px rgba(#000000, .04);
+	
+	.card-header { 
+		border-radius: 0;
+		background:none;
+		padding: $s-4 $s-5 $s-2;
+		color:var(--title);
+		border-bottom: 1px solid transparent;
+		h1, 
+		h2, 
+		h3, 
+		h4, 
+		h5, 
+		p {
+			padding: 0;
+			min-height:auto;
+			margin:0;
+		}
+	}
+	.card-body {
+		padding: $s-4 $s-5;
+	}
+	.card-footer {
+		padding: $s-1 $s-5 $s-4;
+		background: none;
+		border:0;
+	}
+	.card-button {
+		position: absolute;
+		right: 0;
+		top: $s-3;
+	}
+}

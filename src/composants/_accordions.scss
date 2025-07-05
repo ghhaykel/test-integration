@@ -1,0 +1,36 @@
+
+/* default */
+.accordion {
+	border-radius: 0;
+	box-shadow: none;
+	.accordion-item{
+		border: 0;
+	}
+	.accordion-header {
+		position: relative;
+	}
+	.accordion-button {
+		border-radius: 0 !important;
+		&:focus{
+			box-shadow: none !important;
+		}
+		&:not(.collapsed) {
+			color: var(--text);
+			background-color: var(--background); 
+			box-shadow: none;
+		}
+	}
+	.accordion-button::after { 
+		content: ""; 
+		left: 5px;
+		position: absolute;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 6px solid #BDBDBD;
+		position: absolute;
+		background: transparent !important;
+		height: initial !important;
+		width: initial !important;
+	}
+ 
+}

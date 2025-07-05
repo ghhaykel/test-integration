@@ -1,0 +1,93 @@
+.employee-infos-container {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: white;
+  box-shadow: none;
+}
+
+.employee-infos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+}
+
+.employee-infos-title {
+  margin: 0;
+  font-weight: 500;
+}
+
+.edit-button {
+  transition: color 0.3s ease;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+
+  .btn-label {
+    width: 0;
+    opacity: 0;
+    display: block;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    color: #3f51b5;
+
+    .btn-label {
+      width: 160px;
+      opacity: 1;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+}
+
+.employee-infos-list {
+  position: relative;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px;
+  padding: 5px 10px;
+  margin: 5px 0;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--primary-30);
+    transition: all 0.3s ease-in-out;
+
+    .edit-infos-list {
+      margin-right: 0;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+
+.info-label {
+  font-weight: 400;
+}
+
+.info-data {
+  text-align: right;
+  font-weight: 500;
+}
+
+.edit-infos-list {
+  position: relative;
+  margin-right: -30px;
+  transition: all 0.2s ease-in-out;
+}
+
+.active-edit{
+  background-color: var(--valid-100) !important;
+  color: var(--white) !important;
+  i.icons{
+    color: var(--white) !important;
+  }
+}

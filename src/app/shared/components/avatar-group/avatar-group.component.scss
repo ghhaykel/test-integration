@@ -1,0 +1,30 @@
+.avatar-group {
+    display: flex;
+    align-items: center;
+    .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        object-fit: cover;
+        margin-left: -10px;
+        background-color: #eee;
+        position: relative;
+      }
+      
+      .avatar:first-child {
+        margin-left: 0;
+      }
+      
+      .avatar.more {
+        background-color: var(--warning-100);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white; 
+        z-index: 99;
+      }
+  }
+  
+
+  

@@ -1,0 +1,22 @@
+<section class="employee-infos-container px-4 mb-3">
+
+    <div class="employee-infos-header">
+        <h3 class="employee-infos-title">{{ title }}</h3>
+        <button *ngIf="editable" [ngClass]="isActive?'active-edit':''" class="btn btn-secondary rounded edit-button mb-0 me-0 ps-2" (click)="toggleEdit()" matTooltip="Modifier"
+            aria-label="Modifier les informations">
+            <i class="icons icon-edit me-1"></i>
+            <span class="btn-label">Modifier les informations</span>
+        </button>
+    </div>
+
+    <div class="employee-infos-list">
+        <div *ngFor="let info of infos" class="info-item">
+            <span class="info-label">{{ info.label }}:</span>
+            <span class="info-data d-flex">{{ info.data }}
+                <span class="edit-infos-list ps-2">
+                <i class="icons icon-edit"></i>
+                </span>
+            </span>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,88 @@
+.color-primary,
+.color-primary a {color: var(--primary-200) !important;}
+.color-valid,
+.color-valid a   {color: var(--valid-200) !important;}
+.color-error,
+.color-error a   {color: var(--error-200) !important;} 
+.color-info,
+.color-info a    {color: var(--info-200) !important;} 
+.color-white,
+.color-white a   {color: var(--white) !important;}
+.color-title,
+.color-title a   {color: var(--title) !important;}
+.color-text,
+.color-text a    {color: var(--text) !important;}
+.color-prompt, 
+.color-prompt a  {color: var(--prompt) !important;}
+
+.uppercase       {text-transform: uppercase;}
+.light           {font-weight: 300;}
+.semibold        {font-weight: 600;}
+.bold, b, strong {font-weight: 700;}
+.italic, em      {font-style: italic;}
+.underline       {text-decoration: underline;}
+
+h1, h2, h3, h4, h5, 
+.h1, .h2, .h3, .h4, .h5 {
+	color:var(--title);
+	small {
+		color:var(--prompt);
+	} 
+}
+h1, .h1 {
+	font-size:1.8rem;
+	font-weight:700;
+	margin:$s-2 0;
+}
+h2, .h2 {
+	font-size:1.4rem;
+	font-weight:700;
+	margin:$s-2 0 $s-2 0;
+}
+h3, .h3 {
+	font-size:1.15rem;
+	font-weight:600;
+	margin:$s-2 0 $s-2 0;
+}
+h4, .h4 {
+	font-size:1.08rem;
+	font-weight:600;
+	margin:$s-2 0 $s-2;
+}
+h5, .h5 {
+	font-size:1rem;
+	font-weight:600;
+	margin:$s-2 0 $s-2;
+    i.icons {
+		margin: 0 10px;
+		font-size:1.15rem;
+	}
+}
+.gradient {
+	background: linear-gradient(to right, var(--primary-100) 0%, var(--primary-300) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	display: inline-block;
+}
+p {
+	font-size:1rem;
+	margin-bottom: $s-4;
+	color:var(--text);
+}
+small {
+	font-size: 0.85em;
+	color: var(--prompt);
+}
+a {
+	color:var(--primary-300);
+	cursor: pointer;
+	display: inline-block;
+	&:hover {
+		color:var(--primary-300);
+	}
+}
+
+b, .b, .bold {
+	color: var(--title);
+	font-weight: 600;
+}

@@ -1,0 +1,32 @@
+<aside class="sidebar " [class.collapsed]="(isCollapsed$ | async)">
+  <nav class="sidebar-nav">
+    <ul class="nav flex-column">
+      <li *ngFor="let item of menuItems" class="nav-item">
+        <a class="nav-link d-flex align-items-center" [routerLink]="item.link || null"
+          [routerLinkActive]="item.link ? 'active' : ''"
+          [class.collapsed]="item.subItems.length > 0 && !isItemActive(item)"
+          [attr.data-bs-toggle]="item.subItems.length > 0 ? 'collapse' : null"
+          [attr.data-bs-target]="item.subItems.length > 0 ? '#' + item.title : null">
+
+          <i class="bi {{ item.icon }} me-3"></i>
+          <span class="menu-text">{{ item.title }}</span>
+
+          <span *ngIf="item.badge" class="badge bg-secondary ms-auto">{{ item.badge }}</span>
+
+          <i *ngIf="item.subItems.length > 0" class="bi bi-chevron-down ms-auto"></i>
+        </a>
+
+        <div *ngIf="item.subItems.length > 0" [id]="item.title" class="collapse sub-menu"
+          [class.show]="isItemActive(item)">
+          <ul class="nav flex-column ps-4">
+            <li *ngFor="let subItem of item.subItems" class="nav-item">
+              <a class="nav-link" [routerLink]="subItem.link" routerLinkActive="active">
+                {{ subItem.title }}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</aside>

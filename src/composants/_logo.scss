@@ -1,0 +1,31 @@
+
+.logo {
+	height:40px;
+	width: 80%; 
+	background-color: var(--white);
+	padding: 1px;
+	border-radius: 8px;
+	a {
+		height:40px; 
+		display: block;
+	    width: 100%;
+		@extend %radius;
+	}
+	img {
+		height:$s-6;
+	}
+	&.logo-default a {
+		background: var(--logo);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: auto 30px;
+	}
+ 
+}
+
+
+@media screen and (max-width: 1200px) {
+	.logo {
+		width:auto;
+	}
+}

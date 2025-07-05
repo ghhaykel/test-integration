@@ -1,0 +1,17 @@
+<div class="card-emplyee mb-3">
+  <div class="card-body px-3 py-2 employee-box d-flex align-items-center">
+    <div class="employee-photo me-2 " >
+      <span class="employee-photo-inner" [style]="'border-color: ' + employee.color"> 
+      <img [src]="employee.photo || 'assets/default-avatar.png'" width="60" height="60" alt="Employee">
+      </span>
+      <span class="employee-badge badge rounded-pill bg-{{ employee.status === 'active' ? 'success' : 'warning' }}">
+        <i class="icons " [ngClass]="employee.status === 'active' ? 'icon-checkmark' : 'icon-minus'"></i>
+      </span>
+    </div>
+    <div class="employee-text">
+      <h5 class=" mb-0">{{ employee.name }}</h5>
+      <p class="mb-1">{{ employee.position }}</p>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,255 @@
+.btn, a.btn {
+	@extend %anim;
+	border-radius: $s-2;
+	border:none;
+	margin : 0px $s-3 $s-3 0px;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 $s-4;
+	font-size: 14px;  
+	cursor: pointer; 
+	font-weight: 500;  
+	display: flex ;
+    align-items: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-decoration: none;
+	&:hover, &:focus {
+		@extend %anim;
+		box-shadow: none !important;
+	}
+
+	&.btn-i {
+		line-height: inherit;
+		padding: 10px $s-3;
+		&:hover, &:focus {
+			background-color: var(--accessibility);
+			color: var(--white);
+		}
+		.badge, .badges {
+			position: absolute;
+			top: $s-1;
+			left: $s-4;
+			padding: $s-1 6px;
+		}
+
+	}
+	&.btn-small {
+		height: $s-5;
+		line-height: $s-5;
+		font-size:$s-3;
+		padding: 0 $s-2;
+	}
+	&.btn-primary {
+		background:var(--primary-200);
+		color:var(--white);
+		box-shadow:none;
+		border: 1px solid var(--primary-200);
+		&:hover, &:focus {
+			background-color:var(--primary-300) !important;
+			color:var(--white);
+			border: 1px solid var(--primary-300);
+		}
+		&.btn-i i { 
+			color: var(--white);
+		}
+	}
+	&.btn-secondary {
+		background:var(--primary-50);
+		color:var(--text);
+		box-shadow:none;
+		border: 1px solid var(--border);
+		&:hover, &:focus {
+			color:var(--title);
+			box-shadow:none;
+			border: 1px solid var(--border);
+			background-color: var(--accessibility);
+		}
+		&.btn-i i { 
+			color: var(--text);
+		}
+	}
+	&.btn-error {
+		color:var(--white);
+		background: var(--error-200);
+		border: 1px solid var(--error-200);
+		&:hover, &:focus {
+			background:var(--error-300) !important;
+			color:var(--white);
+			border: 1px solid var(--error-300);
+		}
+	}
+	&.rounded{
+		border-radius: $s-4 !important;
+	}
+}
+.btn-primary.active:hover,
+.btn-primary:active:hover, 
+.open>.dropdown-toggle.btn-primary:hover,
+.btn-primary.active.focus, 
+.btn-primary.active:focus, 
+.btn-primary:active.focus, 
+.btn-primary:active:focus, 
+.open>.dropdown-toggle.btn-primary.focus, 
+.open>.dropdown-toggle.btn-primary:focus,
+.btn-primary:not([disabled]):not(.disabled).active, 
+.btn-primary:not([disabled]):not(.disabled):active, 
+.show>.btn-primary.dropdown-toggle {
+	color: var(--white);
+    background: var(--primary-300);
+    box-shadow: none !important;
+	border: 1px solid var(--primary-300);
+}
+
+.btn-secondary.active:hover, 
+.btn-secondary:active:hover, 
+.open>.dropdown-toggle.btn-secondary:hover,
+.btn-secondary.active.focus, 
+.btn-secondary.active:focus, 
+.btn-secondary:active.focus,
+.btn-secondary:active:focus, 
+.open>.dropdown-toggle.btn-secondary.focus, 
+.open>.dropdown-toggle.btn-secondary:focus,
+.btn-secondary:not([disabled]):not(.disabled).active, 
+.btn-secondary:not([disabled]):not(.disabled):active, 
+.show>.btn-secondary.dropdown-toggle {
+	background:var(--white);
+	color:var(--title);
+    box-shadow: none !important;
+	border: 1px solid var(--border);
+}
+
+.btn-error.active:hover, 
+.btn-error:active:hover, 
+.open>.dropdown-toggle.btn-error:hover,
+.btn-error.active.focus, 
+.btn-error.active:focus, 
+.btn-error:active.focus, 
+.btn-error:active:focus, 
+.open>.dropdown-toggle.btn-error.focus, 
+.open>.dropdown-toggle.btn-error:focus {
+	background: var(--error-300);
+	color: var(--white);
+	border: 1px solid var(--error-300);
+}
+
+
+.btn-icon {
+	height: $s-6;
+	line-height: $s-6;
+	min-width: $s-6;
+	background: transparent;
+	color: var(--title);
+	padding: 0;
+	position: relative;
+	border-radius: 40px !important;
+	.icon {
+		height: 40px;
+		width: 40px;
+		line-height:40px;
+		padding: 10px;
+		text-align: center;
+		background: var(--primary-200);
+		display:inline-block;
+		border-radius: 50%;
+		position: absolute;
+		top: 6px;
+		left:6px;
+		i {
+			color:var(--white);
+			font-size: $s-4;
+		}
+	}
+	span {
+		padding: 0 $s-4 0 $s-6; 
+	}
+	&:hover, &:focus {
+		background: var(--background);
+		border-radius: $s-6 !important;
+		color: var(--title);
+		.icon {
+			background: var(--primary-300);
+		}
+	}
+	&:focus {
+		outline: none;
+		background-color: var(--accessibility);
+		border-radius:$s-6 !important;
+	}
+	
+	&.btn-small {    
+		height: 44px;
+		line-height: 44px;
+		min-width: 44px;
+		padding: 0px;
+		.icon {
+			height:$s-5;
+			width: $s-5;
+			padding:$s-2;
+			i {
+				font-size: 16px !important;
+			}
+		}
+	}
+}
+
+.btn-block {
+	display: block;
+	width:100%;
+}
+
+.btn-group {
+	position: static;
+	margin :0px $s-3 $s-3 0; 
+	.dropdown-mega .dropdown-menu {
+		padding: 0;
+	}
+	.btn {
+		margin: 0;
+		font-size:$s-3;
+		height:40px;
+		line-height: 40px;
+		padding: 0 $s-3;
+		margin-right: $s-3;
+		border-radius:40px !important;
+	}
+	.btn-icon {
+		min-width:40px;
+		padding: 0; 
+		text-align: center;
+		margin:0; 
+		height:40px;
+		padding: $s-3;
+		i {
+			font-size: 16px !important;
+			color: var(--prompt);
+			&:hover, &:focus {
+				color: var(--title);
+				border-radius:40px !important;
+			}
+		}
+	}
+}
+.btn-link {
+	color: var(--text);
+	border:0;
+		&:hover, &:focus {
+			color: var(--title);
+			background-color: var(--accessibility);
+			text-decoration: none;
+		}
+}
+
+.btn-link:not(:disabled):not(.disabled).active, 
+.btn-link:not(:disabled):not(.disabled):active, 
+.show>.btn-link.dropdown-toggle {
+	color: var(--title);
+	background-color: var(--background);
+	border-color: var(--border);
+}
+.btn-link:not(:disabled):not(.disabled).active:focus, 
+.btn-link:not(:disabled):not(.disabled):active:focus, 
+.show>.btn-link-secondary.dropdown-toggle:focus {
+	box-shadow: none;
+}

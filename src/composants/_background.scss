@@ -1,0 +1,19 @@
+.no-bg {background-color:transparent !important;}
+.bg-background {background-color: var(--background) !important;}
+.bg-white {background-color: var(--white) !important;}
+.bg-title {background-color: var(--title) !important;}
+
+.bg-primary-100 {background-color:var(--primary-100) !important;}
+.bg-primary, 
+.bg-primary-200 {background-color:var(--primary-200) !important;}
+.bg-primary-300 {background-color:var(--primary-300) !important;}
+
+.bg-error-100 {background-color:var(--error-100) !important;}
+.bg-error,
+.bg-error-200 {background-color:var(--error-200)  !important;}
+.bg-error-300 {background-color:var(--error-300) !important;}
+
+.bg-valid-100 {background-color:var(--valid-100) !important;}
+.bg-valid,
+.bg-valid-200 {background-color:var(--valid-200) !important;}
+.bg-valid-300 {background-color:var(--valid-300) !important;}

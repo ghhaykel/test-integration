@@ -1,0 +1,131 @@
+.form-group {
+	margin-bottom:0;
+}
+
+label {
+	font-size:14px;
+	color:var(--title);
+	font-weight: 600;
+	display: block;
+	margin-bottom: $s-2
+}
+input, .form-control, 
+select {
+	color:var(--text);
+	font-size: 14px;
+	border:1px solid var(--border);
+	border-radius: $s-1;
+	width:100%;
+	background:var(--white);
+	margin : 0 0 $s-3 0;
+	height: 40px !important;
+    line-height: 28px;
+    padding: $s-1 $s-3;
+	&:focus {
+		outline: none;
+		border:1px solid var(--border);
+		border-bottom:1px solid var(--text);
+		box-shadow: none;
+		background:var(--white);
+		color: var(--text);
+	}
+}
+
+html input[disabled] {
+    background: var(--background);
+    cursor: not-allowed;
+}
+
+textarea {
+	background:var(--white);
+	border-radius: $s-1;
+	border:1px solid var(--border); 
+	padding:$s-2 $s-3;
+	width:100%;
+	min-height:$s-8;
+	margin:0 0 $s-3 0;
+	color: var(--text);
+	&:focus {
+		outline: none;
+		border-bottom:1px solid var(--text);
+	}
+}
+.help {
+	input {margin:0 0 $s-2;}
+	p {
+		i {
+			float:left;
+			margin-right:$s-3;
+			font-size:$s-4;
+			color:var(--text);
+			position: relative;
+			top: 2px;
+		}
+	}
+}
+
+.form-group {
+	&.form-error {
+		input {
+			border-bottom:2px solid var(--error-200) !important;
+			margin:0;
+		}
+		p {
+			i {
+				float:left;
+				margin-right:$s-2;
+				font-size:$s-4; 
+				color:var(--error-200);
+				position: relative;
+				top: 2px;
+			}
+		}
+	}
+}
+
+input.error {
+	border: 1px solid var(--error-200) !important;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+    color: var(--prompt);
+    -webkit-transition: all 0.2s;
+       -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+         -o-transition: all 0.2s;
+            transition: all 0.2s;
+}
+
+::-webkit-input-placeholder {color: var(--prompt);} 
+::-moz-placeholder          {color: var(--prompt);}
+:-ms-input-placeholder      {color: var(--prompt);}
+:-moz-placeholder           {color: var(--prompt);}
+
+input[type="color"] {
+	width: $s-6;
+}
+//::-webkit-calendar-picker-indicator {
+//	filter: invert(1);
+//}
+
+.input-group {
+	&.form-search {
+		input {
+			border: 0;
+			padding-left: $s-6;
+			box-shadow: none;
+		}
+		i {
+			position: absolute;
+			z-index: 6;
+			left: $s-4;
+			top: 10px;
+			color: var(--prompt);
+		}
+	}
+	[type=search] {
+		border:0;
+		box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.04);
+	}
+}

@@ -1,0 +1,13 @@
+<div class="container-wrap">
+  <app-header></app-header>
+  <div class="content-wrap">
+    <app-sidebar [class.collapsed]="(layoutService.sidebarCollapsed$ | async)"
+      [class.show-mobile]="(layoutService.sidebarCollapsed$ | async) === false">
+    </app-sidebar>
+    <main class="main-content p-0 mb-0" [class.collapsed]="(layoutService.sidebarCollapsed$ | async)">
+
+      <router-outlet></router-outlet>
+
+    </main>
+  </div>
+</div>

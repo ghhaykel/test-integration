@@ -1,0 +1,31 @@
+.nav-tabs {
+	border:0;
+	.nav-link {
+		padding: 0 $s-5;
+		color: var(--text);
+		height: $s-6;
+		line-height: $s-6;
+		position: relative;
+		border: 0;
+		background:transparent;
+		border-radius: 0;
+		&.active {
+			color:var(--primary-100);
+			border:0;
+			 background-color: transparent;
+			&::before {
+				content: "";
+				height:3px;
+				width:100%;
+				position: absolute;
+				left:0; 
+				background: var(--primary-100);
+				bottom: 0;
+				@extend %radius;
+			}
+		}
+		&:focus {
+			background-color: var(--accessibility);
+		}
+	}
+}
